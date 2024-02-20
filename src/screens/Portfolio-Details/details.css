@@ -1,0 +1,150 @@
+.portfolio-details-page {
+    position: relative;
+    font-size: 36px;
+}
+.portfolio-details-page .back-btn {
+    position: fixed;
+    font-size: .4em;
+    font-weight: 700;
+    top: 10%;
+    left: 10%;
+}
+.portfolio-details-page .back-btn a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.portfolio-details-page .caption-text {
+    padding-top: 30vh;
+    display: flex;
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    font-size: .3em;
+    font-weight: 600;
+}
+.portfolio-details-page .portfolio-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3em;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #bababa;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+.portfolio-header-image-container {
+    /* overflow: hidden; */
+    /* width: 100%; */
+    /* height: 25vh; */
+    position: relative;
+    filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+.portfolio-header-image-container .portfolio-header-image-thumbnail {
+    /* width: 100%; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* left: 0;
+    right: 0; */
+}
+
+.portfolio-title .titles {
+    overflow: hidden;
+}
+.portfolio-title .titles .first span,
+.portfolio-title .titles .last span {
+    display: inline-block;
+    position: relative;
+}
+.portfolio-title .titles .first {
+    margin-right: .3em;
+}
+.portfolio-title .titles .first2 {
+    margin-right: 0;
+}
+.portfolio-details-page .body {
+    color: var(--primary-font-color);
+    width: 75%;
+    margin: auto;
+    margin-top: 55vh;
+}
+.portfolio-details-page .body .title {
+    color: var(--primary-font-color);
+    font-family: 'Syncopate', sans-serif;
+    font-size: .35em;
+    width: 40%;
+}
+
+.portfolio-details-page .body .story-container,
+.portfolio-details-page .body .feature-container,
+.portfolio-details-page .body .techTalk-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+}
+.portfolio-details-page .body .story-container .story,
+.portfolio-details-page .body .feature-container .feature,
+.portfolio-details-page .body .techTalk-container .techTalk {
+    font-size: .38em;
+    width: 50%;
+    line-height: 170%;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.portfolio-details-page .body .feature-container {
+    flex-direction: row-reverse;
+    margin-top: 30vh;
+}
+.portfolio-details-page .body .feature-container .title {
+    justify-self: flex-end;
+    width: fit-content;
+}
+.portfolio-details-page .body .feature-container .feature {
+    padding-left: 0;
+}
+.portfolio-details-page .body .feature-container .feature li {
+    margin-bottom: .3em;
+}
+.portfolio-details-page .live-link {
+    width: 30vw;
+    position: absolute;
+    bottom: -1%;
+    right: 5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: .3em;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    padding: .7em 0em;
+    border-bottom: 1px solid #bababa;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link:hover {
+    color: black;
+    padding: .7em;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    background-color: #bababa;
+    z-index: -1;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link:hover::before {
+    transform: scaleY(1);
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link i {
+    font-size: 2em;
+    transform: rotateZ(135deg);
+}

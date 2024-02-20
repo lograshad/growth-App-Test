@@ -1,0 +1,212 @@
+.home-page {
+    /* height: 100vh;
+    width: 100vw; */
+    position: relative;
+}
+.home-page .middle-content {
+    max-width: 50vw;
+    max-height: 50vh;
+    scale: 0.8;
+    top: 45vh;
+    left: 45vw;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.home-page .logo-img-wrapper{
+    overflow: hidden;
+    transform-origin: center;
+}
+.home-page .logo-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+.home-page .my-name {
+    position: absolute;
+    top: 5vh;
+    left: 10%;
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 1;
+    text-transform: uppercase;
+}
+.home-page .year {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.home-page .img-name {
+    position: absolute;
+    left: 0;
+}
+.home-page .date {
+    position: absolute;
+    right: 0;
+}
+.home-page .img-name, .home-page .date {
+    text-transform: uppercase;
+    font-weight: 700;
+    bottom: -20%;
+    font-size: 10px;
+    opacity: 0;
+}
+/* normal content */
+/* title styles */
+
+.home-page .title-stn {
+    font-size: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: var(--title-font-color);
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    user-select: none;
+    padding-top: 40vh;
+}
+.line-1 {
+overflow: hidden;
+}
+.lineChildren {
+    transform: translate(0, 100%);
+}
+.lineParent {
+    overflow: hidden;
+}
+
+/* scroll section */
+.scroll-stn {
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 45vh;
+    padding-top: 45vh;
+}
+.scroll-stn #scroll {
+    transform: rotateZ(90deg);
+}
+.scroll-indicator {
+    content: '';
+    width: .05em;
+    height: 6rem;
+    background-color: var(--title-font-color);
+    /* transform: rotateZ(90deg); */
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+.scroll-indicator::after {
+    content: '';
+    width: .01em;
+    height: 5rem;
+    background-color: var(--primary-font-color);
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    animation: scroll 800ms infinite forwards ease-out;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    25% {
+        top: 0%;
+    }
+    75% {
+        top: -75%;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+/* about section */
+.about-stn {
+    padding: 0 3rem;
+    padding-bottom: 20vh;
+}
+.about-body {
+    font-size: 5vw;
+    font-family: var(--secondary-font);
+    text-align: center;
+    line-height: 100%;
+    font-weight: 500;
+    padding: 0 3rem;
+    padding-bottom: 20vh;
+    opacity: 1;
+}
+.lineChildren {
+    transform: translate(0, 100%);
+}
+.lineParent {
+    overflow: hidden;
+}
+.home-page .is-reveal {
+    opacity: 1;
+}
+
+/* navbar section */
+.navbar-container {
+    position: absolute;
+    right: 10%;
+    top: 5vh;
+}
+.navbar-container a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 10px;
+    /* opacity: 1; */
+    text-transform: uppercase;
+}
+.navbar-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-screen-text {
+    display: none;
+}
+@media (max-width: 920px) {
+    .home-page {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-page .mobile-screen-text {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 150%;
+        opacity: 0;
+        user-select: none;
+        padding: 0 5vw;
+        animation: anim 300ms 1600ms forwards;
+    }
+    .home-page .normal-content {
+        display: none;
+    }
+}
+
+@keyframes anim {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
